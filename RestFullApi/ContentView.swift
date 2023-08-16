@@ -8,9 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var posts: [Post] = []
+    
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView{
+            List(posts) { post in
+                NavigationLink(destination:PostDetail(post: post)) {
+                    Text(post.title)
+                }
+            }
+            .navigationBarTitle("Posts")
+        }
+        .onAppear {
+            APIManager().fetchPosts { fetchedPost in
+                self.posts = fetchedPost
+                
+            }
+        }
     }
 }
 

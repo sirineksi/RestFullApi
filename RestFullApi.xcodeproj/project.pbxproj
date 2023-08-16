@@ -11,6 +11,9 @@
 		230CF1492A8D8438005FF9DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230CF1482A8D8438005FF9DD /* ContentView.swift */; };
 		230CF14B2A8D843D005FF9DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 230CF14A2A8D843D005FF9DD /* Assets.xcassets */; };
 		230CF14E2A8D843D005FF9DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 230CF14D2A8D843D005FF9DD /* Preview Assets.xcassets */; };
+		230CF1552A8D845E005FF9DD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230CF1542A8D845E005FF9DD /* Model.swift */; };
+		230CF1572A8D84E1005FF9DD /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230CF1562A8D84E1005FF9DD /* APIManager.swift */; };
+		230CF1592A8D8889005FF9DD /* PostDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230CF1582A8D8889005FF9DD /* PostDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		230CF1482A8D8438005FF9DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		230CF14A2A8D843D005FF9DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		230CF14D2A8D843D005FF9DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		230CF1542A8D845E005FF9DD /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		230CF1562A8D84E1005FF9DD /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		230CF1582A8D8889005FF9DD /* PostDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,9 @@
 				230CF1482A8D8438005FF9DD /* ContentView.swift */,
 				230CF14A2A8D843D005FF9DD /* Assets.xcassets */,
 				230CF14C2A8D843D005FF9DD /* Preview Content */,
+				230CF1542A8D845E005FF9DD /* Model.swift */,
+				230CF1562A8D84E1005FF9DD /* APIManager.swift */,
+				230CF1582A8D8889005FF9DD /* PostDetail.swift */,
 			);
 			path = RestFullApi;
 			sourceTree = "<group>";
@@ -137,7 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				230CF1572A8D84E1005FF9DD /* APIManager.swift in Sources */,
+				230CF1552A8D845E005FF9DD /* Model.swift in Sources */,
 				230CF1492A8D8438005FF9DD /* ContentView.swift in Sources */,
+				230CF1592A8D8889005FF9DD /* PostDetail.swift in Sources */,
 				230CF1472A8D8438005FF9DD /* RestFullApiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
