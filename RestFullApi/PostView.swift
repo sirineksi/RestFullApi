@@ -2,12 +2,12 @@
 //  PostDetail.swift
 //  RestFullApi
 //
-//  Created by ceksi on 17.08.2023.
+//  Created by sirineksi on 17.08.2023.
 //
 
 import SwiftUI
 
-struct PostDetail: View {
+struct PostView: View {
     
     let post: Post
     
@@ -21,7 +21,3 @@ struct PostDetail: View {
         .navigationBarTitle(post.title)
     }
 }
-
-
-
-

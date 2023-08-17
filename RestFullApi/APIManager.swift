@@ -33,5 +33,28 @@ class APIManager {
                 }.resume()
             
         }
+    func fetchComments(completion: @escaping ([Comment]) -> Void)  {
+        guard let url = URL(string: "https://jsonplaceholder.typicode.com/comments") else {
+            return
+        }
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+                return
+            }
+            guard let data = data else {
+                return
+            }
+            do {
+                let comments = try JSONDecoder().decode([Comment].self, from: data)
+                DispatchQueue.main.async {
+                    completion(comments)
+                }
+            }catch{
+                print("Error decoding data: \(error.localizedDescription)")
+            }
+
+        }.resume()
+    }
     }
 
