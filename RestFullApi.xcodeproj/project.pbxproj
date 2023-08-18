@@ -17,6 +17,8 @@
 		23724B1E2A8E679E00BEB2D2 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23724B1D2A8E679E00BEB2D2 /* CommentView.swift */; };
 		23724B202A8E69D700BEB2D2 /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23724B1F2A8E69D700BEB2D2 /* PostListView.swift */; };
 		23724B222A8E6A5800BEB2D2 /* CommentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23724B212A8E6A5800BEB2D2 /* CommentListView.swift */; };
+		23724B242A8F8F1D00BEB2D2 /* AlbumListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23724B232A8F8F1D00BEB2D2 /* AlbumListView.swift */; };
+		23724B262A8F8FFF00BEB2D2 /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23724B252A8F8FFF00BEB2D2 /* AlbumView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		23724B1D2A8E679E00BEB2D2 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		23724B1F2A8E69D700BEB2D2 /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 		23724B212A8E6A5800BEB2D2 /* CommentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListView.swift; sourceTree = "<group>"; };
+		23724B232A8F8F1D00BEB2D2 /* AlbumListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListView.swift; sourceTree = "<group>"; };
+		23724B252A8F8FFF00BEB2D2 /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,14 +67,12 @@
 		230CF1452A8D8438005FF9DD /* RestFullApi */ = {
 			isa = PBXGroup;
 			children = (
+				23724B2B2A8F929800BEB2D2 /* Common */,
+				23724B2A2A8F927B00BEB2D2 /* Service */,
+				23724B292A8F926800BEB2D2 /* Main */,
+				23724B282A8F923200BEB2D2 /* Detail */,
+				23724B272A8F922500BEB2D2 /* List */,
 				230CF1462A8D8438005FF9DD /* RestFullApiApp.swift */,
-				23724B212A8E6A5800BEB2D2 /* CommentListView.swift */,
-				23724B1F2A8E69D700BEB2D2 /* PostListView.swift */,
-				230CF1482A8D8438005FF9DD /* ContentView.swift */,
-				230CF1542A8D845E005FF9DD /* Model.swift */,
-				230CF1562A8D84E1005FF9DD /* APIManager.swift */,
-				23724B1D2A8E679E00BEB2D2 /* CommentView.swift */,
-				230CF1582A8D8889005FF9DD /* PostView.swift */,
 				230CF14A2A8D843D005FF9DD /* Assets.xcassets */,
 				230CF14C2A8D843D005FF9DD /* Preview Content */,
 			);
@@ -83,6 +85,50 @@
 				230CF14D2A8D843D005FF9DD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		23724B272A8F922500BEB2D2 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				23724B232A8F8F1D00BEB2D2 /* AlbumListView.swift */,
+				23724B1F2A8E69D700BEB2D2 /* PostListView.swift */,
+				23724B212A8E6A5800BEB2D2 /* CommentListView.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		23724B282A8F923200BEB2D2 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				23724B252A8F8FFF00BEB2D2 /* AlbumView.swift */,
+				230CF1582A8D8889005FF9DD /* PostView.swift */,
+				23724B1D2A8E679E00BEB2D2 /* CommentView.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		23724B292A8F926800BEB2D2 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				230CF1482A8D8438005FF9DD /* ContentView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		23724B2A2A8F927B00BEB2D2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				230CF1562A8D84E1005FF9DD /* APIManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		23724B2B2A8F929800BEB2D2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				230CF1542A8D845E005FF9DD /* Model.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,11 +203,13 @@
 			files = (
 				23724B1E2A8E679E00BEB2D2 /* CommentView.swift in Sources */,
 				230CF1572A8D84E1005FF9DD /* APIManager.swift in Sources */,
+				23724B242A8F8F1D00BEB2D2 /* AlbumListView.swift in Sources */,
 				23724B222A8E6A5800BEB2D2 /* CommentListView.swift in Sources */,
 				230CF1552A8D845E005FF9DD /* Model.swift in Sources */,
 				230CF1492A8D8438005FF9DD /* ContentView.swift in Sources */,
 				230CF1592A8D8889005FF9DD /* PostView.swift in Sources */,
 				230CF1472A8D8438005FF9DD /* RestFullApiApp.swift in Sources */,
+				23724B262A8F8FFF00BEB2D2 /* AlbumView.swift in Sources */,
 				23724B202A8E69D700BEB2D2 /* PostListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,8 +23,9 @@ struct ContentView: View {
                     Text("Post List View")
                 }.padding()
                 
-                
-                
+                NavigationLink(destination:AlbumListView()) {
+                    Text("Album List View")
+                }.padding()
             }
             
            
