@@ -22,8 +22,8 @@ struct CommentListView: View {
                 .navigationBarTitle("Comments")
             }
             .onAppear {
-                APIManager().fetchComments { fetchedPost in
-                    self.comments = fetchedPost
+                APIManager().fetchComments { fetchedComment in
+                    self.comments = fetchedComment
                     
                 }
             }

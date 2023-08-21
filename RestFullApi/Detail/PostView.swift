@@ -10,6 +10,7 @@ import SwiftUI
 struct PostView: View {
     
     let post: Post
+    @State var comments: [Comment] = []
     
     var body: some View {
         VStack{
@@ -17,6 +18,21 @@ struct PostView: View {
                 .font(.title)
             Text(post.body)
                 .padding()
+            
+            NavigationView{
+                List(comments) { comment in
+                    NavigationLink(destination:CommentView(comment: comment)) {
+                        Text(comment.name)
+                    }
+                }
+                .navigationBarTitle("Comments")
+            }
+            .onAppear {
+                APIManager().fetchComments(forPostWithID: post.id) { fetchedComment in
+                    self.comments = fetchedComment
+                    
+                }
+            }
         }
         .navigationBarTitle(post.title)
     }

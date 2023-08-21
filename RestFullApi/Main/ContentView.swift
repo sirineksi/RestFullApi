@@ -26,6 +26,17 @@ struct ContentView: View {
                 NavigationLink(destination:AlbumListView()) {
                     Text("Album List View")
                 }.padding()
+                
+                NavigationLink(destination:PhotoListView()) {
+                    Text("Photo List View")
+                }.padding()
+                
+                NavigationLink(destination:TodoListView()) {
+                    Text("Todo List View")
+                }.padding()
+                NavigationLink(destination:UserListView()) {
+                    Text("User List View")
+                }.padding()
             }
             
            

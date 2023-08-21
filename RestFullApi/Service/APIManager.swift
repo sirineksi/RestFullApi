@@ -61,6 +61,32 @@ class APIManager {
         }.resume()
     }
     
+    func fetchComments( forPostWithID postID: Int, completion: @escaping ([Comment]) -> Void)  {
+        
+        guard let url = URL(string: "https://jsonplaceholder.typicode.com/comments?postId=\(postID)") else {
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+                return
+            }
+            guard let data = data else {
+                return
+            }
+            do {
+                let comments = try JSONDecoder().decode([Comment].self, from: data)
+                DispatchQueue.main.async {
+                    completion(comments)
+                }
+            }catch{
+                print("Error decoding data: \(error.localizedDescription)")
+            }
+
+        }.resume()
+    }
+    
     func fetchAlbums(completion: @escaping ([Album]) -> Void) {
         
         
@@ -94,5 +120,95 @@ class APIManager {
         }
         .resume()
        }
+     
+    func fetchPhotos(completion: @escaping ([Photo]) -> Void ) {
+        
+        guard let url = URL(string: "https://jsonplaceholder.typicode.com/photos") else {
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+                return
+            }
+       
+            
+            guard let data = data else {
+                return
+            }
+            
+            do {
+                let photos = try JSONDecoder().decode([Photo].self, from: data)
+                DispatchQueue.main.async {
+                    completion(photos)
+                }
+            }catch {
+                print("Error decoding data: \(error.localizedDescription)")
+            }
 
+        }
+        .resume()
+    }
+    
+    func fetchTodos(completion: @escaping ([Todo]) -> Void) {
+        
+        guard let url = URL(string: "https://jsonplaceholder.typicode.com/todos") else {
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print("Error: \(error.localizedDescription) ")
+                return
+            }
+            
+            guard let data = data else {
+                return
+            }
+           
+            do {
+                let todos = try JSONDecoder().decode([Todo].self, from: data)
+                DispatchQueue.main.async {
+                    completion(todos)
+                }
+            }catch {
+                print("Error decoding data: \(error.localizedDescription)")
+            }
+            
+            
+            
+        }
+        .resume()
+    }
+    
+    func fetchUsers(completion: @escaping ([User]) -> Void) {
+        
+        guard let url = URL(string: "https://jsonplaceholder.typicode.com/users") else {
+            return
+        }
+        
+        
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print("Error \(error.localizedDescription)")
+                return
+            }
+            guard let data = data else {
+                return
+            }
+            
+            do {
+                let users = try JSONDecoder().decode([User].self, from: data)
+                DispatchQueue.main.async {
+                    completion(users)
+                }
+            }catch {
+                print("Error decoding data: \(error.localizedDescription)")
+            }
+        }
+        .resume()
+    }
+    
 }

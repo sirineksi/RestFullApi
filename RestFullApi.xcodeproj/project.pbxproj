@@ -14,6 +14,12 @@
 		230CF1552A8D845E005FF9DD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230CF1542A8D845E005FF9DD /* Model.swift */; };
 		230CF1572A8D84E1005FF9DD /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230CF1562A8D84E1005FF9DD /* APIManager.swift */; };
 		230CF1592A8D8889005FF9DD /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230CF1582A8D8889005FF9DD /* PostView.swift */; };
+		23710CDB2A917B0400417B5F /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23710CDA2A917B0400417B5F /* PhotoView.swift */; };
+		23710CDD2A917BCF00417B5F /* PhotoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23710CDC2A917BCF00417B5F /* PhotoListView.swift */; };
+		23710CDF2A9180EA00417B5F /* TodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23710CDE2A9180EA00417B5F /* TodoView.swift */; };
+		23710CE12A91826D00417B5F /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23710CE02A91826D00417B5F /* TodoListView.swift */; };
+		23710CE32A94175900417B5F /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23710CE22A94175900417B5F /* UserView.swift */; };
+		23710CE52A9417BB00417B5F /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23710CE42A9417BB00417B5F /* UserListView.swift */; };
 		23724B1E2A8E679E00BEB2D2 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23724B1D2A8E679E00BEB2D2 /* CommentView.swift */; };
 		23724B202A8E69D700BEB2D2 /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23724B1F2A8E69D700BEB2D2 /* PostListView.swift */; };
 		23724B222A8E6A5800BEB2D2 /* CommentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23724B212A8E6A5800BEB2D2 /* CommentListView.swift */; };
@@ -30,6 +36,12 @@
 		230CF1542A8D845E005FF9DD /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		230CF1562A8D84E1005FF9DD /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		230CF1582A8D8889005FF9DD /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		23710CDA2A917B0400417B5F /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		23710CDC2A917BCF00417B5F /* PhotoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListView.swift; sourceTree = "<group>"; };
+		23710CDE2A9180EA00417B5F /* TodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoView.swift; sourceTree = "<group>"; };
+		23710CE02A91826D00417B5F /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
+		23710CE22A94175900417B5F /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		23710CE42A9417BB00417B5F /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		23724B1D2A8E679E00BEB2D2 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		23724B1F2A8E69D700BEB2D2 /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 		23724B212A8E6A5800BEB2D2 /* CommentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListView.swift; sourceTree = "<group>"; };
@@ -90,9 +102,12 @@
 		23724B272A8F922500BEB2D2 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				23710CDC2A917BCF00417B5F /* PhotoListView.swift */,
 				23724B232A8F8F1D00BEB2D2 /* AlbumListView.swift */,
 				23724B1F2A8E69D700BEB2D2 /* PostListView.swift */,
 				23724B212A8E6A5800BEB2D2 /* CommentListView.swift */,
+				23710CE02A91826D00417B5F /* TodoListView.swift */,
+				23710CE42A9417BB00417B5F /* UserListView.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -100,9 +115,12 @@
 		23724B282A8F923200BEB2D2 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				23710CDA2A917B0400417B5F /* PhotoView.swift */,
 				23724B252A8F8FFF00BEB2D2 /* AlbumView.swift */,
 				230CF1582A8D8889005FF9DD /* PostView.swift */,
 				23724B1D2A8E679E00BEB2D2 /* CommentView.swift */,
+				23710CDE2A9180EA00417B5F /* TodoView.swift */,
+				23710CE22A94175900417B5F /* UserView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -203,14 +221,20 @@
 			files = (
 				23724B1E2A8E679E00BEB2D2 /* CommentView.swift in Sources */,
 				230CF1572A8D84E1005FF9DD /* APIManager.swift in Sources */,
+				23710CDF2A9180EA00417B5F /* TodoView.swift in Sources */,
+				23710CE52A9417BB00417B5F /* UserListView.swift in Sources */,
 				23724B242A8F8F1D00BEB2D2 /* AlbumListView.swift in Sources */,
+				23710CE12A91826D00417B5F /* TodoListView.swift in Sources */,
 				23724B222A8E6A5800BEB2D2 /* CommentListView.swift in Sources */,
 				230CF1552A8D845E005FF9DD /* Model.swift in Sources */,
+				23710CE32A94175900417B5F /* UserView.swift in Sources */,
+				23710CDB2A917B0400417B5F /* PhotoView.swift in Sources */,
 				230CF1492A8D8438005FF9DD /* ContentView.swift in Sources */,
 				230CF1592A8D8889005FF9DD /* PostView.swift in Sources */,
 				230CF1472A8D8438005FF9DD /* RestFullApiApp.swift in Sources */,
 				23724B262A8F8FFF00BEB2D2 /* AlbumView.swift in Sources */,
 				23724B202A8E69D700BEB2D2 /* PostListView.swift in Sources */,
+				23710CDD2A917BCF00417B5F /* PhotoListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
