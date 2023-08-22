@@ -10,14 +10,19 @@ import SwiftUI
 struct PhotoView: View {
     
     let photo: Photo
+    @State var albums: [Album] = []
+   
     
     var body: some View {
         VStack{
             Text(photo.title)
                 .font(.title)
-           
+            
+            
+                       
         }
         .navigationBarTitle(photo.title)
+        
     }
 }
 

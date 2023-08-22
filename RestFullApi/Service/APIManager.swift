@@ -151,6 +151,37 @@ class APIManager {
         .resume()
     }
     
+    func fetchPhotos( forPostWithID albumId: Int, completion: @escaping ([Photo]) -> Void)  {
+        
+        guard let url = URL(string: "https://jsonplaceholder.typicode.com/photos?albumId=\(albumId)") else {
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+                return
+            }
+       
+            
+            guard let data = data else {
+                return
+            }
+            
+            do {
+                let photos = try JSONDecoder().decode([Photo].self, from: data)
+                DispatchQueue.main.async {
+                    completion(photos)
+                }
+            }catch {
+                print("Error decoding data: \(error.localizedDescription)")
+            }
+
+        }
+        .resume()
+    }
+    
+    
     func fetchTodos(completion: @escaping ([Todo]) -> Void) {
         
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/todos") else {
@@ -211,4 +242,32 @@ class APIManager {
         .resume()
     }
     
+    func fetchPosts( forUserWithID userId: Int, completion: @escaping ([Post]) -> Void) {
+        
+        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts?userId=\(userId)") else {
+            return
+        }
+        
+        
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print("Error \(error.localizedDescription)")
+                return
+            }
+            guard let data = data else {
+                return
+            }
+            
+            do {
+                let users = try JSONDecoder().decode([Post].self, from: data)
+                DispatchQueue.main.async {
+                    completion(users)
+                }
+            }catch {
+                print("Error decoding data: \(error.localizedDescription)")
+            }
+        }
+        .resume()
+    }
 }
